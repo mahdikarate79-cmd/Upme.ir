@@ -1,0 +1,149 @@
+# ============================================
+# robots.txt for UpMe - upme.ir
+# Last updated: 2025-06-06
+# ============================================
+
+# Allow all search engines
+User-agent: *
+Allow: /
+
+# Crawl delay (to avoid server overload)
+Crawl-delay: 10
+
+# Sitemap location
+Sitemap: https://upme.ir/sitemap.xml
+
+# ============================================
+# BLOCKED DIRECTORIES & FILES
+# ============================================
+
+# Block admin & sensitive areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /config/
+Disallow: /includes/
+Disallow: /vendor/
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /.env
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /wp-content/plugins/
+Disallow: /wp-content/themes/
+
+# Block temporary & cache files
+Disallow: /temp/
+Disallow: /cache/
+Disallow: /tmp/
+Disallow: /backup/
+
+# Block specific file types (keep private)
+Disallow: /*.sql$
+Disallow: /*.zip$
+Disallow: /*.tar$
+Disallow: /*.gz$
+Disallow: /*.log$
+Disallow: /*.bak$
+Disallow: /*.swp$
+
+# Block common CMS patterns (just in case)
+Disallow: /xmlrpc.php
+Disallow: /wp-login.php
+
+# ============================================
+# SPECIFIC SEARCH ENGINE RULES
+# ============================================
+
+# Google
+User-agent: Googlebot
+Allow: /
+Allow: /*.js
+Allow: /*.css
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.svg
+Allow: /*.webp
+Sitemap: https://upme.ir/sitemap.xml
+
+# Google Images
+User-agent: Googlebot-Image
+Allow: /
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.svg
+Allow: /*.webp
+Allow: /*.gif
+
+# Bing
+User-agent: bingbot
+Allow: /
+Crawl-delay: 10
+Sitemap: https://upme.ir/sitemap.xml
+
+# Yandex
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 15
+
+# DuckDuckGo
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 15
+
+# Apple
+User-agent: Applebot
+Allow: /
+
+# ChatGPT / OpenAI
+User-agent: GPTBot
+Allow: /
+Crawl-delay: 30
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+Crawl-delay: 30
+
+# ============================================
+# BLOCK BAD BOTS (spam, scrapers, AI trainers)
+# ============================================
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+User-agent: cohere-ai
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: MauiBot
+Disallow: /
+
+User-agent: AspiegelBot
+Disallow: /
+
+# ============================================
+# END OF ROBOTS.TXT
+# ============================================
