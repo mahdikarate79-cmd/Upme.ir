@@ -390,8 +390,11 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            width: 180px;
+            height: 180px;
             animation: logo-float 4.5s ease-in-out infinite;
             transform-style: preserve-3d;
+            pointer-events: none;
         }
 
         .logo-shimmer {
@@ -415,8 +418,12 @@
             position: relative;
             z-index: 2;
             display: block;
-            width: 180px;
-            height: auto;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            background: transparent;
+            -webkit-mask-image: radial-gradient(circle, #000 52%, transparent 72%);
+            mask-image: radial-gradient(circle, #000 52%, transparent 72%);
             filter: drop-shadow(0 0 28px rgba(255,255,255,0.08));
             transition: filter 0.5s ease;
         }
@@ -963,7 +970,7 @@
                     </div>
                     <div class="logo-img-wrap">
                         <div class="logo-shimmer" aria-hidden="true"></div>
-                        <img src="/logo.png" alt="لوگوی UpMe" width="180" height="180" class="logo-img">
+                        <img src="/logo.png" alt="لوگوی UpMe" width="180" height="180" class="logo-img" decoding="async">
                     </div>
                 </div>
             </div>
