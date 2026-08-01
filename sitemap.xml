@@ -43,7 +43,21 @@
     </url>
 
     <url>
-        <loc>https://upmee.site/seo-keywords.txt</loc>
+        <loc>https://upmee.site/blog/student-guide.html</loc>
+        <lastmod>2026-08-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://upmee.site/blog/konkur-tips.html</loc>
+        <lastmod>2026-08-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://upmee.site/assets/css/site.css</loc>
         <lastmod>2026-08-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
