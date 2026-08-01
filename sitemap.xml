@@ -57,14 +57,14 @@
     </url>
 
     <url>
-        <loc>https://upmee.site/assets/css/site.css</loc>
+        <loc>https://upmee.site/seo-keywords.txt</loc>
         <lastmod>2026-08-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
 
     <url>
-        <loc>https://upmee.site/blog</loc>
+        <loc>https://upmee.site/blog/</loc>
         <lastmod>2026-08-01</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
