@@ -1,0 +1,36 @@
+{
+  "name": "UpMe — مسیریاب هوشمند شغلی و تحصیلی",
+  "short_name": "UpMe",
+  "description": "بهترین اپلیکیشن خودشناسی، تست شخصیت و مسیریابی شغلی و تحصیلی با هوش مصنوعی",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#0a0a0a",
+  "lang": "fa",
+  "dir": "rtl",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["lifestyle", "education", "productivity"],
+  "related_applications": [
+    {
+      "platform": "play",
+      "url": "https://upmee.site/app/upme.apk",
+      "id": "com.upme.app"
+    },
+    {
+      "platform": "itunes",
+      "url": "https://upmee.site"
+    }
+  ]
+}

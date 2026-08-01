@@ -1,70 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
-        xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0"
-        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
-    <!-- صفحه اصلی - بالاترین اولویت -->
     <url>
-        <loc>https://upme.ir/</loc>
-        <lastmod>2025-06-06</lastmod>
+        <loc>https://upmee.site/</loc>
+        <lastmod>2026-08-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
-        <xhtml:link rel="alternate" hreflang="fa" href="https://upme.ir/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://upme.ir/en"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://upme.ir/"/>
+        <xhtml:link rel="alternate" hreflang="fa" href="https://upmee.site/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://upmee.site/en"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://upmee.site/"/>
+        <image:image>
+            <image:loc>https://upmee.site/logo.png</image:loc>
+            <image:title>UpMe upme apme اپمی لوگو</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://upmee.site/og-image.png</image:loc>
+            <image:title>UpMe اپلیکیشن خودشناسی و مسیریابی شغلی</image:title>
+        </image:image>
     </url>
 
-    <!-- صفحه دانلود -->
     <url>
-        <loc>https://upme.ir/#cta</loc>
-        <lastmod>2025-06-06</lastmod>
+        <loc>https://upmee.site/#cta</loc>
+        <lastmod>2026-08-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
 
-    <!-- صفحه امکانات -->
     <url>
-        <loc>https://upme.ir/#features</loc>
-        <lastmod>2025-06-06</lastmod>
+        <loc>https://upmee.site/#features</loc>
+        <lastmod>2026-08-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
-    <!-- صفحه سوالات متداول -->
     <url>
-        <loc>https://upme.ir/#faq-heading</loc>
-        <lastmod>2025-06-06</lastmod>
+        <loc>https://upmee.site/#faq-heading</loc>
+        <lastmod>2026-08-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
-    <!-- صفحات آینده (پیش‌فرض برای رشد سایت) -->
     <url>
-        <loc>https://upme.ir/blog</loc>
-        <lastmod>2025-06-06</lastmod>
+        <loc>https://upmee.site/seo-keywords.txt</loc>
+        <lastmod>2026-08-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <url>
+        <loc>https://upmee.site/blog</loc>
+        <lastmod>2026-08-01</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://upme.ir/privacy</loc>
-        <lastmod>2025-06-06</lastmod>
+        <loc>https://upmee.site/blog/career-path.html</loc>
+        <lastmod>2026-08-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://upmee.site/blog/mbti-vs-holland.html</loc>
+        <lastmod>2026-08-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://upmee.site/blog/career-change.html</loc>
+        <lastmod>2026-08-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://upmee.site/blog/introducing-upme.html</loc>
+        <lastmod>2026-08-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://upmee.site/privacy</loc>
+        <lastmod>2026-08-01</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>
     </url>
 
     <url>
-        <loc>https://upme.ir/terms</loc>
-        <lastmod>2025-06-06</lastmod>
+        <loc>https://upmee.site/terms</loc>
+        <lastmod>2026-08-01</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>
     </url>
 
     <url>
-        <loc>https://upme.ir/contact</loc>
-        <lastmod>2025-06-06</lastmod>
+        <loc>https://upmee.site/contact</loc>
+        <lastmod>2026-08-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>

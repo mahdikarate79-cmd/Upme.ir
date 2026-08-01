@@ -1,6 +1,6 @@
 # ============================================
-# robots.txt for UpMe - upme.ir
-# Last updated: 2025-06-06
+# robots.txt for UpMe - upmee.site
+# Last updated: 2026-08-01
 # ============================================
 
 # Allow all search engines
@@ -11,7 +11,7 @@ Allow: /
 Crawl-delay: 10
 
 # Sitemap location
-Sitemap: https://upme.ir/sitemap.xml
+Sitemap: https://upmee.site/sitemap.xml
 
 # ============================================
 # BLOCKED DIRECTORIES & FILES
@@ -63,7 +63,7 @@ Allow: /*.png
 Allow: /*.jpg
 Allow: /*.svg
 Allow: /*.webp
-Sitemap: https://upme.ir/sitemap.xml
+Sitemap: https://upmee.site/sitemap.xml
 
 # Google Images
 User-agent: Googlebot-Image
@@ -78,7 +78,7 @@ Allow: /*.gif
 User-agent: bingbot
 Allow: /
 Crawl-delay: 10
-Sitemap: https://upme.ir/sitemap.xml
+Sitemap: https://upmee.site/sitemap.xml
 
 # Yandex
 User-agent: YandexBot
