@@ -42,14 +42,7 @@
         <priority>0.7</priority>
     </url>
 
-    <url>
-        <loc>https://upmee.site/blog/student-guide.html</loc>
-        <lastmod>2026-08-01</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-
-    <url>
+<url>
         <loc>https://upmee.site/blog/konkur-tips.html</loc>
         <lastmod>2026-08-01</lastmod>
         <changefreq>monthly</changefreq>
@@ -63,42 +56,21 @@
         <priority>0.5</priority>
     </url>
 
-    <url>
-        <loc>https://upmee.site/blog/</loc>
-        <lastmod>2026-08-01</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
+<url>
         <loc>https://upmee.site/blog/career-path.html</loc>
         <lastmod>2026-08-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
-    <url>
-        <loc>https://upmee.site/blog/mbti-vs-holland.html</loc>
-        <lastmod>2026-08-01</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-
-    <url>
+<url>
         <loc>https://upmee.site/blog/career-change.html</loc>
         <lastmod>2026-08-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
-    <url>
-        <loc>https://upmee.site/blog/introducing-upme.html</loc>
-        <lastmod>2026-08-01</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-
-    <url>
+<url>
         <loc>https://upmee.site/privacy</loc>
         <lastmod>2026-08-01</lastmod>
         <changefreq>yearly</changefreq>
