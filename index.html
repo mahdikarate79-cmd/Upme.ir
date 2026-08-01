@@ -478,44 +478,34 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 190px;
-            height: 190px;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(255,255,255,0.04) 0%, var(--bg) 68%);
-            box-shadow:
-                0 0 60px rgba(10,10,10,0.9) inset,
-                0 0 40px rgba(255,255,255,0.03);
             animation: logo-float 4.5s ease-in-out infinite;
             transform-style: preserve-3d;
         }
 
         .logo-shimmer {
             position: absolute;
-            inset: 0;
-            border-radius: 50%;
+            inset: -8%;
             background: linear-gradient(
                 105deg,
-                transparent 35%,
-                rgba(255,255,255,0.14) 48%,
-                rgba(255,255,255,0.22) 50%,
-                rgba(255,255,255,0.14) 52%,
-                transparent 65%
+                transparent 38%,
+                rgba(255,255,255,0.1) 48%,
+                rgba(255,255,255,0.18) 50%,
+                rgba(255,255,255,0.1) 52%,
+                transparent 62%
             );
-            transform: translateX(-120%) rotate(12deg);
+            transform: translateX(-130%) rotate(12deg);
             animation: logo-shimmer-sweep 4s ease-in-out infinite;
             pointer-events: none;
-            mix-blend-mode: overlay;
+            mix-blend-mode: soft-light;
         }
 
         .logo-img {
             position: relative;
             z-index: 2;
-            max-width: 150px;
+            display: block;
+            width: 180px;
             height: auto;
-            filter: drop-shadow(0 0 24px rgba(255,255,255,0.1));
-            mix-blend-mode: lighten;
-            -webkit-mask-image: radial-gradient(circle at center, #000 42%, transparent 78%);
-            mask-image: radial-gradient(circle at center, #000 42%, transparent 78%);
+            filter: drop-shadow(0 0 28px rgba(255,255,255,0.08));
             transition: filter 0.5s ease;
         }
 
@@ -524,7 +514,7 @@
         }
 
         .logo-animated:hover .logo-img {
-            filter: drop-shadow(0 0 40px rgba(255,255,255,0.22));
+            filter: drop-shadow(0 0 42px rgba(255,255,255,0.18));
         }
 
         @keyframes logo-float {
@@ -814,8 +804,7 @@
             .logo-ring-2 { width: 190px; height: 190px; }
             .logo-glow { width: 175px; height: 175px; }
             .logo-orbit { width: 195px; height: 195px; }
-            .logo-img-wrap { width: 155px; height: 155px; }
-            .logo-img { max-width: 120px; }
+            .logo-img { width: 140px; }
             .hero h2 { font-size: 2rem; letter-spacing: -1px; margin-bottom: 1.2rem; }
             .hero p { font-size: 0.9rem; margin-bottom: 2rem; }
             .hero-buttons { flex-direction: column; width: 100%; max-width: 300px; gap: 0.75rem; }
@@ -887,7 +876,7 @@
                     </div>
                     <div class="logo-img-wrap">
                         <div class="logo-shimmer" aria-hidden="true"></div>
-                        <img src="/logo.png" alt="لوگوی UpMe" width="180" height="auto" class="logo-img">
+                        <img src="/logo.png" alt="لوگوی UpMe" width="180" height="180" class="logo-img">
                     </div>
                 </div>
             </div>
