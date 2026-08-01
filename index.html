@@ -348,15 +348,95 @@
             justify-content: center;
             align-items: center;
         }
-        .hero-logo img {
+
+        .logo-animated {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 220px;
+            height: 220px;
+        }
+
+        .logo-glow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, rgba(10,10,10,0.4) 45%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            animation: logo-glow-pulse 4s ease-in-out infinite;
+        }
+
+        .logo-ring {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            border: 1px solid rgba(255,255,255,0.06);
+            pointer-events: none;
+        }
+
+        .logo-ring-1 {
+            width: 190px;
+            height: 190px;
+            animation: logo-ring-spin 12s linear infinite;
+        }
+
+        .logo-ring-2 {
+            width: 210px;
+            height: 210px;
+            border-color: rgba(255,255,255,0.03);
+            animation: logo-ring-spin 18s linear infinite reverse;
+        }
+
+        .logo-ring-1::after,
+        .logo-ring-2::after {
+            content: '';
+            position: absolute;
+            top: -1px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 6px;
+            height: 6px;
+            background: rgba(255,255,255,0.35);
+            border-radius: 50%;
+            box-shadow: 0 0 12px rgba(255,255,255,0.25);
+        }
+
+        .logo-img {
+            position: relative;
+            z-index: 2;
             max-width: 180px;
             height: auto;
-            filter: drop-shadow(0 0 40px rgba(255,255,255,0.05));
-            transition: all 0.5s ease;
+            animation: logo-float 5s ease-in-out infinite;
+            filter: drop-shadow(0 0 30px rgba(255,255,255,0.06));
+            mix-blend-mode: lighten;
+            transition: filter 0.5s ease, transform 0.5s ease;
         }
-        .hero-logo img:hover {
-            filter: drop-shadow(0 0 60px rgba(255,255,255,0.12));
-            transform: scale(1.02);
+
+        .logo-animated:hover .logo-img {
+            filter: drop-shadow(0 0 50px rgba(255,255,255,0.15));
+            animation-play-state: paused;
+        }
+
+        @keyframes logo-float {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-8px) scale(1.02); }
+        }
+
+        @keyframes logo-glow-pulse {
+            0%, 100% { opacity: 0.6; transform: translate(-50%, -50%) scale(0.95); }
+            50% { opacity: 1; transform: translate(-50%, -50%) scale(1.08); }
+        }
+
+        @keyframes logo-ring-spin {
+            from { transform: translate(-50%, -50%) rotate(0deg); }
+            to { transform: translate(-50%, -50%) rotate(360deg); }
         }
 
         .hero-eyebrow {
@@ -568,6 +648,35 @@
         }
         footer a { color: #fff; text-decoration: none; font-weight: 500; }
 
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1.25rem;
+            flex-wrap: wrap;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            color: var(--text-secondary);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: #fff;
+            color: #000;
+            border-color: #fff;
+        }
+
         .seo-content { display: none; }
 
         @media (max-width: 768px) {
@@ -578,7 +687,11 @@
             .nav-download-count { display: none; }
             .nav-btn { padding: 0.45rem 1.2rem; font-size: 0.75rem; }
             .hero { padding: 5rem 1rem 3rem; min-height: 90vh; }
-            .hero-logo img { max-width: 140px; }
+            .logo-animated { width: 180px; height: 180px; }
+            .logo-ring-1 { width: 155px; height: 155px; }
+            .logo-ring-2 { width: 170px; height: 170px; }
+            .logo-glow { width: 160px; height: 160px; }
+            .logo-img { max-width: 140px; }
             .hero h2 { font-size: 2rem; letter-spacing: -1px; margin-bottom: 1.2rem; }
             .hero p { font-size: 0.9rem; margin-bottom: 2rem; }
             .hero-buttons { flex-direction: column; width: 100%; max-width: 300px; gap: 0.75rem; }
@@ -640,7 +753,12 @@
         <section class="hero" aria-labelledby="hero-heading">
             <!-- ===== لوگو در بالای هدر ===== -->
             <div class="hero-logo fade-in">
-                <img src="/logo.png" alt="لوگوی UpMe" width="180" height="auto">
+                <div class="logo-animated" aria-hidden="true">
+                    <div class="logo-glow"></div>
+                    <div class="logo-ring logo-ring-1"></div>
+                    <div class="logo-ring logo-ring-2"></div>
+                    <img src="/logo.png" alt="لوگوی UpMe" width="180" height="auto" class="logo-img">
+                </div>
             </div>
             
             <div class="hero-eyebrow fade-in">
@@ -771,7 +889,7 @@
                 <a href="https://upmee.site/app/upme.apk" target="_blank" class="store-btn download-direct" onclick="trackDownload()" rel="noopener noreferrer">دانلود مستقیم</a>
                 <a href="#" class="store-btn">گوگل پلی</a>
                 <a href="#" class="store-btn">اپ استور</a>
-                <a href="#" class="store-btn">بازار</a>
+                <a href="http://cafebazaar.ir/app/?id=com.example.upme&ref=share" target="_blank" class="store-btn" rel="noopener noreferrer">بازار</a>
             </div>
             <div class="total-downloads-banner fade-in" aria-live="polite">
                 تا حالا <span class="total-num" id="footer-count">---</span> نفر مسیرشون رو با UpMe شروع کردن
@@ -802,6 +920,10 @@
     </div>
 
     <footer role="contentinfo">
+        <div class="footer-social">
+            <a href="https://www.instagram.com/p/DZf5ZcBxWxy/?igsh=MTNkdXNwcTZ1dzI5bQ==" target="_blank" class="social-link" rel="noopener noreferrer" aria-label="پیچ اینستاگرام UpMe">اینستاگرام</a>
+            <a href="https://t.me/upmeapp" target="_blank" class="social-link" rel="noopener noreferrer" aria-label="تلگرام UpMe">تلگرام</a>
+        </div>
         <p>© 2025 <a href="#">UpMe</a>. تمامی حقوق محفوظ است. | <a href="/privacy">حریم خصوصی</a> | <a href="/terms">قوانین</a> | <a href="/blog/introducing-upme.html">معرفی کامل Upme</a></p>
     </footer>
 
