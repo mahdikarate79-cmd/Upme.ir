@@ -354,8 +354,26 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 220px;
-            height: 220px;
+            width: 240px;
+            height: 240px;
+            isolation: isolate;
+            perspective: 600px;
+        }
+
+        .logo-aurora {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 260px;
+            height: 260px;
+            transform: translate(-50%, -50%);
+            background:
+                radial-gradient(circle at 30% 30%, rgba(255,255,255,0.07) 0%, transparent 50%),
+                radial-gradient(circle at 70% 60%, rgba(255,255,255,0.05) 0%, transparent 45%),
+                radial-gradient(circle at 50% 50%, rgba(10,10,10,0) 30%, var(--bg) 72%);
+            border-radius: 50%;
+            pointer-events: none;
+            animation: logo-aurora-shift 8s ease-in-out infinite;
         }
 
         .logo-glow {
@@ -363,12 +381,13 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 200px;
-            height: 200px;
-            background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, rgba(10,10,10,0.4) 45%, transparent 70%);
+            width: 210px;
+            height: 210px;
+            background: radial-gradient(circle, rgba(255,255,255,0.12) 0%, rgba(10,10,10,0.5) 42%, transparent 68%);
             border-radius: 50%;
             pointer-events: none;
-            animation: logo-glow-pulse 4s ease-in-out infinite;
+            animation: logo-glow-pulse 3.5s ease-in-out infinite;
+            filter: blur(2px);
         }
 
         .logo-ring {
@@ -377,66 +396,168 @@
             left: 50%;
             transform: translate(-50%, -50%);
             border-radius: 50%;
-            border: 1px solid rgba(255,255,255,0.06);
             pointer-events: none;
         }
 
         .logo-ring-1 {
-            width: 190px;
-            height: 190px;
-            animation: logo-ring-spin 12s linear infinite;
+            width: 200px;
+            height: 200px;
+            border: 1px solid transparent;
+            background:
+                linear-gradient(var(--bg), var(--bg)) padding-box,
+                linear-gradient(135deg, rgba(255,255,255,0.35), rgba(255,255,255,0.02), rgba(255,255,255,0.25)) border-box;
+            animation: logo-ring-spin 10s linear infinite;
         }
 
         .logo-ring-2 {
-            width: 210px;
-            height: 210px;
-            border-color: rgba(255,255,255,0.03);
-            animation: logo-ring-spin 18s linear infinite reverse;
+            width: 225px;
+            height: 225px;
+            border: 1px solid rgba(255,255,255,0.04);
+            animation: logo-ring-spin 16s linear infinite reverse;
         }
 
         .logo-ring-1::after,
         .logo-ring-2::after {
             content: '';
             position: absolute;
-            top: -1px;
+            top: -2px;
             left: 50%;
             transform: translateX(-50%);
-            width: 6px;
-            height: 6px;
-            background: rgba(255,255,255,0.35);
+            width: 8px;
+            height: 8px;
+            background: #fff;
             border-radius: 50%;
-            box-shadow: 0 0 12px rgba(255,255,255,0.25);
+            box-shadow: 0 0 16px rgba(255,255,255,0.6), 0 0 32px rgba(255,255,255,0.2);
+            animation: logo-dot-pulse 2s ease-in-out infinite;
+        }
+
+        .logo-orbit {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 230px;
+            height: 230px;
+            transform: translate(-50%, -50%);
+            animation: logo-ring-spin 14s linear infinite;
+            pointer-events: none;
+        }
+
+        .logo-orbit span {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 5px;
+            height: 5px;
+            margin-left: -2.5px;
+            background: rgba(255,255,255,0.5);
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(255,255,255,0.4);
+        }
+
+        .logo-orbit span:nth-child(2) {
+            top: 50%;
+            left: 100%;
+            margin-left: -2.5px;
+            margin-top: -2.5px;
+            opacity: 0.35;
+            width: 4px;
+            height: 4px;
+        }
+
+        .logo-orbit span:nth-child(3) {
+            top: 72%;
+            left: 8%;
+            opacity: 0.25;
+            width: 3px;
+            height: 3px;
+        }
+
+        .logo-img-wrap {
+            position: relative;
+            z-index: 3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 190px;
+            height: 190px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255,255,255,0.04) 0%, var(--bg) 68%);
+            box-shadow:
+                0 0 60px rgba(10,10,10,0.9) inset,
+                0 0 40px rgba(255,255,255,0.03);
+            animation: logo-float 4.5s ease-in-out infinite;
+            transform-style: preserve-3d;
+        }
+
+        .logo-shimmer {
+            position: absolute;
+            inset: 0;
+            border-radius: 50%;
+            background: linear-gradient(
+                105deg,
+                transparent 35%,
+                rgba(255,255,255,0.14) 48%,
+                rgba(255,255,255,0.22) 50%,
+                rgba(255,255,255,0.14) 52%,
+                transparent 65%
+            );
+            transform: translateX(-120%) rotate(12deg);
+            animation: logo-shimmer-sweep 4s ease-in-out infinite;
+            pointer-events: none;
+            mix-blend-mode: overlay;
         }
 
         .logo-img {
             position: relative;
             z-index: 2;
-            max-width: 180px;
+            max-width: 150px;
             height: auto;
-            animation: logo-float 5s ease-in-out infinite;
-            filter: drop-shadow(0 0 30px rgba(255,255,255,0.06));
+            filter: drop-shadow(0 0 24px rgba(255,255,255,0.1));
             mix-blend-mode: lighten;
-            transition: filter 0.5s ease, transform 0.5s ease;
+            -webkit-mask-image: radial-gradient(circle at center, #000 42%, transparent 78%);
+            mask-image: radial-gradient(circle at center, #000 42%, transparent 78%);
+            transition: filter 0.5s ease;
         }
 
-        .logo-animated:hover .logo-img {
-            filter: drop-shadow(0 0 50px rgba(255,255,255,0.15));
+        .logo-animated:hover .logo-img-wrap {
             animation-play-state: paused;
         }
 
+        .logo-animated:hover .logo-img {
+            filter: drop-shadow(0 0 40px rgba(255,255,255,0.22));
+        }
+
         @keyframes logo-float {
-            0%, 100% { transform: translateY(0) scale(1); }
-            50% { transform: translateY(-8px) scale(1.02); }
+            0%, 100% { transform: translateY(0) rotateX(0deg) rotateY(0deg); }
+            25% { transform: translateY(-6px) rotateX(4deg) rotateY(-3deg); }
+            50% { transform: translateY(-10px) rotateX(0deg) rotateY(0deg); }
+            75% { transform: translateY(-6px) rotateX(-3deg) rotateY(3deg); }
         }
 
         @keyframes logo-glow-pulse {
-            0%, 100% { opacity: 0.6; transform: translate(-50%, -50%) scale(0.95); }
-            50% { opacity: 1; transform: translate(-50%, -50%) scale(1.08); }
+            0%, 100% { opacity: 0.55; transform: translate(-50%, -50%) scale(0.92); }
+            50% { opacity: 1; transform: translate(-50%, -50%) scale(1.1); }
+        }
+
+        @keyframes logo-aurora-shift {
+            0%, 100% { transform: translate(-50%, -50%) rotate(0deg) scale(1); }
+            50% { transform: translate(-50%, -50%) rotate(8deg) scale(1.06); }
         }
 
         @keyframes logo-ring-spin {
             from { transform: translate(-50%, -50%) rotate(0deg); }
             to { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        @keyframes logo-shimmer-sweep {
+            0%, 18% { transform: translateX(-120%) rotate(12deg); opacity: 0; }
+            35% { opacity: 1; }
+            55%, 100% { transform: translateX(120%) rotate(12deg); opacity: 0; }
+        }
+
+        @keyframes logo-dot-pulse {
+            0%, 100% { transform: translateX(-50%) scale(0.85); opacity: 0.7; }
+            50% { transform: translateX(-50%) scale(1.2); opacity: 1; }
         }
 
         .hero-eyebrow {
@@ -687,11 +808,14 @@
             .nav-download-count { display: none; }
             .nav-btn { padding: 0.45rem 1.2rem; font-size: 0.75rem; }
             .hero { padding: 5rem 1rem 3rem; min-height: 90vh; }
-            .logo-animated { width: 180px; height: 180px; }
-            .logo-ring-1 { width: 155px; height: 155px; }
-            .logo-ring-2 { width: 170px; height: 170px; }
-            .logo-glow { width: 160px; height: 160px; }
-            .logo-img { max-width: 140px; }
+            .logo-animated { width: 200px; height: 200px; }
+            .logo-aurora { width: 220px; height: 220px; }
+            .logo-ring-1 { width: 170px; height: 170px; }
+            .logo-ring-2 { width: 190px; height: 190px; }
+            .logo-glow { width: 175px; height: 175px; }
+            .logo-orbit { width: 195px; height: 195px; }
+            .logo-img-wrap { width: 155px; height: 155px; }
+            .logo-img { max-width: 120px; }
             .hero h2 { font-size: 2rem; letter-spacing: -1px; margin-bottom: 1.2rem; }
             .hero p { font-size: 0.9rem; margin-bottom: 2rem; }
             .hero-buttons { flex-direction: column; width: 100%; max-width: 300px; gap: 0.75rem; }
@@ -753,11 +877,18 @@
         <section class="hero" aria-labelledby="hero-heading">
             <!-- ===== لوگو در بالای هدر ===== -->
             <div class="hero-logo fade-in">
-                <div class="logo-animated" aria-hidden="true">
-                    <div class="logo-glow"></div>
-                    <div class="logo-ring logo-ring-1"></div>
-                    <div class="logo-ring logo-ring-2"></div>
-                    <img src="/logo.png" alt="لوگوی UpMe" width="180" height="auto" class="logo-img">
+                <div class="logo-animated">
+                    <div class="logo-aurora" aria-hidden="true"></div>
+                    <div class="logo-glow" aria-hidden="true"></div>
+                    <div class="logo-ring logo-ring-1" aria-hidden="true"></div>
+                    <div class="logo-ring logo-ring-2" aria-hidden="true"></div>
+                    <div class="logo-orbit" aria-hidden="true">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <div class="logo-img-wrap">
+                        <div class="logo-shimmer" aria-hidden="true"></div>
+                        <img src="/logo.png" alt="لوگوی UpMe" width="180" height="auto" class="logo-img">
+                    </div>
                 </div>
             </div>
             
